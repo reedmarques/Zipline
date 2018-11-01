@@ -9,7 +9,7 @@ import { FaCheckCircle, FaExclamationTriangle, FaExclamationCircle } from 'react
 import firebase from '../firebase';
 
 
-const priorities = [{value: 'Low', text: 'Low'}, {value: 'High', text: 'High'}, {value: 'Completed', text: 'Completed'}]
+const priorityLabels = [{value: 'Low', text: 'Low'}, {value: 'High', text: 'High'}, {value: 'Completed', text: 'Completed'}]
 
 export default class ZipDetails extends Component {
 
@@ -54,16 +54,6 @@ export default class ZipDetails extends Component {
 
   }
 
-  // call after completion
-  getPendingMaintenance(){
-
-  }
-
-  // call after completion
-  getCompletedMaintenance(){
-
-  }
-
   iconFormat(cell, row) {
     if (row.priority == 'Low') {
       return (<FaExclamationTriangle color='gold'/>)
@@ -74,19 +64,6 @@ export default class ZipDetails extends Component {
 
   completedIconFormat(cell, row) {
     return (<FaCheckCircle color='green'/>)
-  }
-
-  handleRowSelect(row, isSelected, e) {
-    console.log(row, isSelected, e);
-    console.log(this.state.selectedRows);
-
-    // var temp = []
-    // if (isSelected) {
-    //   temp.push(row)
-    // }
-    //
-    // this.setState({completedMaintenance:row}, () => console.log('completedMaintenance', this.state.completedMaintenance))
-
   }
 
   afterSaveCell(row, cellName, cellValue) {
@@ -128,7 +105,6 @@ export default class ZipDetails extends Component {
       mode: 'checkbox',
       bgColor: 'pink',
       className: 'my-selection-custom',
-      onSelect: this.handleRowSelect.bind(this)
     };
 
     const cellEdit = {
@@ -153,7 +129,7 @@ export default class ZipDetails extends Component {
             <TableHeaderColumn width="10%" dataField='issueNo' isKey dataAlign='center'>Issue No.</TableHeaderColumn>
             <TableHeaderColumn width="70%" dataField='problem' dataAlign='left'>Maintenance Description</TableHeaderColumn>
             <TableHeaderColumn width="10%" dataField='priority' dataAlign='center' dataFormat={this.iconFormat}
-              editable={ { type: 'select', options: { values: priorities } } }
+              editable={ { type: 'select', options: { values: priorityLabels } } }
               >Priority</TableHeaderColumn>
         </BootstrapTable>
 

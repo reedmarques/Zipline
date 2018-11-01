@@ -18,8 +18,6 @@ export default class Dashboard extends Component {
   }
 
   componentWillMount() {
-    // this.setState({ data })
-
     this.fetchData()
   }
 
@@ -79,9 +77,6 @@ export default class Dashboard extends Component {
   onRowClick(row) {
     // navigate to new page of Zip details
     this.props.history.push(`/zips/${row['id']}`, { row })
-
-    // return ( <Link to={`/zips/${row['id']}`}/>)
-
   }
 
   render() {
@@ -99,16 +94,20 @@ export default class Dashboard extends Component {
     return (
       <div className="Dash">
 
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <BootstrapTable data={ this.state.data } striped hover options={options}
-          // tableStyle={{padding:30}}
           containerStyle={{paddingLeft:30, paddingLeft:50, paddingRight:50}}
           headerStyle={{justifyContent:'center', alignSelf: 'center'}}
           bodyStyle={{justifyContent:'center', alignSelf: 'center'}}
           >
-          <TableHeaderColumn width="33%" dataField='id' isKey dataAlign='center'>Zip ID</TableHeaderColumn>
-          <TableHeaderColumn width="33%" dataField='pendingMaintenance' dataAlign='center' dataFormat={this.maintenanceFormat}>Pending Maintenance</TableHeaderColumn>
-          <TableHeaderColumn width="33%" dataField='status' dataAlign='center' dataFormat={this.iconFormat}>Status</TableHeaderColumn>
+          <TableHeaderColumn width="33%" dataField='id' isKey dataAlign='center'>
+            Zip ID
+          </TableHeaderColumn>
+          <TableHeaderColumn width="33%" dataField='pendingMaintenance' dataAlign='center' dataFormat={this.maintenanceFormat}>
+            Pending Maintenance
+          </TableHeaderColumn>
+          <TableHeaderColumn width="33%" dataField='status' dataAlign='center' dataFormat={this.iconFormat}>
+            Status
+          </TableHeaderColumn>
         </BootstrapTable>
 
       </div>
