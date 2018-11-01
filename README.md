@@ -1,5 +1,21 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Project Overview:
+
+The main page of this web app is the Dashboard page that shows all registered zips on file.
+
+Some structural overview:
+Statuses: The three statuses are 'Completed', 'High' priority, and 'Low' priority. Any Zip that has at least one 'High' priority is blocked, denoted by a red danger sign. A Zip with 'Low' priority maintenance requests are not blocked, so they are denoted by a green check as well as a yellow warning sign. Finally, Zips with no pending maintenance requests are cleared with a green check. Regarding an automated tool to figure out whether a zip can fly or not, I figured I would build it into the logic of how statuses were determined, allowing the operator to simply see if there is a red danger sign or not.
+
+Zips: Zip attributes consist of a Zip ID <String>, pendingMaintenance <List>, and completedMaintenance <List>.
+
+Maintenance Requests: These have 3 attributes as well: a status number <Int>, priority <Enum/String>, and problem description <String>.
+
+Database: Google NoSQL Firebase, real time updates.
+
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
