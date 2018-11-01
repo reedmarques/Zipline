@@ -1,15 +1,22 @@
 .App {
   text-align: center;
+  background-color: white;
+  height: 100vh;
+}
+
+.App-title {
+  color:#f92222;
+  justify-content: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 10s linear;
   height: 40vmin;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* background-color: #282c34; */
+  height: '10%';
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,4 +36,24 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.Custom-list-item {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 20px;
+  /* width: 300%; */
+}
+
+
+.Home {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  padding: 10px;
 }

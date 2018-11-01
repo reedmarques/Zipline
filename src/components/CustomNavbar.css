@@ -1,0 +1,43 @@
+.navbar-default {
+  background-color: white !important;
+}
+
+.navbar-default {
+  background-image: none;
+  border: none;
+  border-radius: 0;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: grey;
+}
+
+.navbar-default .navbar-brand {
+  color: red;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: red;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: red;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+  color: red;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: black;
+  background-color: transparent;
+  /* border-bottom-color: black;
+  border-bottom-width: 1; */
+}
