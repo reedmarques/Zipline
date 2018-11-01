@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 Project Overview:
 
 The main page of this web app is the Dashboard page that shows all registered zips on file.
